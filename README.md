@@ -57,6 +57,10 @@ lifecycle-iam/
 │   └── lifecycle.db
 ├── docs/
 │   └── evidencias/
+│       ├── 01-menu-principal.png
+│       ├── 02-consulta-colaboradores.png
+│       ├── 03-historico-auditoria-parte1 a 4.png
+│       └── 04-historico-auditoria-parte 2 - 5 a 7.png
 ├── logs/
 ├── modules/
 │   ├── __init__.py
@@ -68,48 +72,30 @@ lifecycle-iam/
 ├── README.md
 ├── LICENSE
 └── .gitignore
-```
 
----
 
-## Evidências de Funcionamento
 
-## Funcionalidades Implementadas
+Evidências de Funcionamento
+As imagens a seguir demonstram a execução do LifeCycle IAM, incluindo o menu principal, a consulta de colaboradores e o histórico de auditoria.
+1. Menu Principal
 
-- Admissão de colaboradores (Joiner).
-- Movimentação de colaboradores (Mover).
-- Desligamento de colaboradores (Leaver).
-- Registro de eventos em banco de dados SQLite.
-- Consulta de colaboradores.
-- Consulta do histórico de auditoria.
+2. Consulta de Colaboradores
 
----
+3. Histórico de Auditoria — Parte 1
 
-## Tecnologias Utilizadas
+4. Histórico de Auditoria — Parte 2
 
-- Python 3
-- SQLite
-- SQL
-- Git e GitHub
-
----
-
-## Ambiente de Desenvolvimento
-
+Ambiente de Desenvolvimento
 O projeto utiliza um ambiente local de simulação, com dados fictícios. Não realiza criação, alteração ou desativação de contas corporativas reais.
 
 Possíveis integrações com serviços de diretório e plataformas de identidade poderão ser consideradas em etapas futuras, exclusivamente em ambientes de teste autorizados.
 
----
-
-## Objetivo
-
+Objetivo
 Aplicar conceitos de IAM, gerenciamento de identidades, automação de processos e rastreabilidade em Segurança da Informação, demonstrando na prática o ciclo de vida de identidades digitais em uma organização.
 
----
+Repositório no GitHub
+LifeCycle IAM — Acessar projeto
 
-## Repositório no GitHub
+Projeto em desenvolvimento contínuo.
 
-[LifeCycle IAM — Acessar projeto](https://github.com/marcioaugustomazzochi/lifecycle-iam)
-
-**Projeto em desenvolvimento contínuo.**
+**Atenção:** os nomes das imagens foram escritos conforme os arquivos que você confirmou na pasta `docs/evidencias`. O GitHub exibirá as imagens quando os quatro arquivos também estiverem publicados no repositório, mantendo exatamente esses nomes e caminhos.
