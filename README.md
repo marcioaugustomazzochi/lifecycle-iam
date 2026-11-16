@@ -57,10 +57,6 @@ lifecycle-iam/
 │   └── lifecycle.db
 ├── docs/
 │   └── evidencias/
-│       ├── 01-menu-principal.png
-│       ├── 02-consulta-colaboradores.png
-│       ├── 03-historico-auditoria-parte1 a 4.png
-│       └── 04-historico-auditoria-parte 2 - 5 a 7.png
 ├── logs/
 ├── modules/
 │   ├── __init__.py
@@ -74,27 +70,6 @@ lifecycle-iam/
 └── .gitignore
 
 
-## Evidências de Funcionamento
-
-Esta seção apresenta capturas de tela que demonstram o funcionamento das principais operações do LifeCycle IAM.
-
-### 1. Menu Principal
-
-![Menu Principal do LifeCycle IAM](docs/evidencias/01-menu-principal.png)
-
-### 2. Consulta de Colaboradores
-
-![Consulta de Colaboradores](docs/evidencias/02-consulta-colaboradores.png)
-
-### 3. Histórico de Auditoria — Registros 1 a 4
-
-![Histórico de Auditoria - Registros 1 a 4](docs/evidencias/03-historico-auditoria-parte1%20a%204.png)
-
-### 4. Histórico de Auditoria — Registros 5 a 7
-
-![Histórico de Auditoria - Registros 5 a 7](docs/evidencias/04-historico-auditoria-parte%202%20-%205%20a%207.png)
-
----
 
 Ambiente de Desenvolvimento
 O projeto utiliza um ambiente local de simulação, com dados fictícios. Não realiza criação, alteração ou desativação de contas corporativas reais.
@@ -109,4 +84,4 @@ LifeCycle IAM — Acessar projeto
 
 Projeto em desenvolvimento contínuo.
 
-**Atenção:** os nomes das imagens foram escritos conforme os arquivos que você confirmou na pasta `docs/evidencias`. O GitHub exibirá as imagens quando os quatro arquivos também estiverem publicados no repositório, mantendo exatamente esses nomes e caminhos.
+**Agora o README está organizado:** títulos com `#`, subtítulos com `##` e `###`, divisórias entre as seções e estrutura do projeto em bloco de código.
