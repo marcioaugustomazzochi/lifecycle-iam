@@ -68,26 +68,46 @@ lifecycle-iam/
 ├── README.md
 ├── LICENSE
 └── .gitignore
+```
 
+---
 
+## Evidências de Funcionamento
 
-Evidências de Funcionamento
-Menu Principal
-Consulta de Colaboradores
-Histórico de Auditoria — Parte 1
-Histórico de Auditoria — Parte 2
+### Menu Principal
 
-Ambiente de Desenvolvimento
+![Menu Principal](docs/evidencias/01-menu-principal.png)
+
+### Consulta de Colaboradores
+
+![Consulta de Colaboradores](docs/evidencias/02-consulta-colaboradores.png)
+
+### Histórico de Auditoria — Parte 1
+
+![Histórico de Auditoria - Parte 1](docs/evidencias/03-historico-auditoria-parte1%20a%204.png)
+
+### Histórico de Auditoria — Parte 2
+
+![Histórico de Auditoria - Parte 2](docs/evidencias/04-historico-auditoria-parte%202%20-%205%20a%207.png)
+
+---
+
+## Ambiente de Desenvolvimento
+
 O projeto utiliza um ambiente local de simulação, com dados fictícios. Não realiza criação, alteração ou desativação de contas corporativas reais.
 
 Possíveis integrações com serviços de diretório e plataformas de identidade poderão ser consideradas em etapas futuras, exclusivamente em ambientes de teste autorizados.
 
-Objetivo
+---
+
+## Objetivo
+
 Aplicar conceitos de IAM, gerenciamento de identidades, automação de processos e rastreabilidade em Segurança da Informação, demonstrando na prática o ciclo de vida de identidades digitais em uma organização.
 
-Repositório no GitHub
-LifeCycle IAM — Acessar projeto
+---
 
-Projeto em desenvolvimento contínuo.
+## Repositório no GitHub
 
-Agora sim: os `#`, `##` e `###` aparecem literalmente no código Markdown.
+[LifeCycle IAM — Acessar projeto](https://github.com/marcioaugustomazzochi/lifecycle-iam)
+
+**Projeto em desenvolvimento contínuo.**
