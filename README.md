@@ -74,16 +74,27 @@ lifecycle-iam/
 └── .gitignore
 
 
+## Evidências de Funcionamento
 
-Evidências de Funcionamento
-As imagens a seguir demonstram a execução do LifeCycle IAM, incluindo o menu principal, a consulta de colaboradores e o histórico de auditoria.
-1. Menu Principal
+Esta seção apresenta capturas de tela que demonstram o funcionamento das principais operações do LifeCycle IAM.
 
-2. Consulta de Colaboradores
+### 1. Menu Principal
 
-3. Histórico de Auditoria — Parte 1
+![Menu Principal do LifeCycle IAM](docs/evidencias/01-menu-principal.png)
 
-4. Histórico de Auditoria — Parte 2
+### 2. Consulta de Colaboradores
+
+![Consulta de Colaboradores](docs/evidencias/02-consulta-colaboradores.png)
+
+### 3. Histórico de Auditoria — Registros 1 a 4
+
+![Histórico de Auditoria - Registros 1 a 4](docs/evidencias/03-historico-auditoria-parte1%20a%204.png)
+
+### 4. Histórico de Auditoria — Registros 5 a 7
+
+![Histórico de Auditoria - Registros 5 a 7](docs/evidencias/04-historico-auditoria-parte%202%20-%205%20a%207.png)
+
+---
 
 Ambiente de Desenvolvimento
 O projeto utiliza um ambiente local de simulação, com dados fictícios. Não realiza criação, alteração ou desativação de contas corporativas reais.
