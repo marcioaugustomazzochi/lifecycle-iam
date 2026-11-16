@@ -50,13 +50,18 @@ O LifeCycle IAM simula processos relacionados ao ciclo de vida de colaboradores,
 
 ## Estrutura do Projeto
 
-```text
+\```text
 lifecycle-iam/
 ├── data/
 ├── database/
 │   └── lifecycle.db
 ├── docs/
 │   └── evidencias/
+│       ├── 01-menu-principal.png
+│       ├── 02-consulta-colaboradores.png
+│       ├── 03-historico-auditoria-parte1 a 4.png
+│       ├── 04-historico-auditoria-parte 2 - 5 a 7.png
+│       └── DESCRICAO.md
 ├── logs/
 ├── modules/
 │   ├── __init__.py
@@ -68,20 +73,41 @@ lifecycle-iam/
 ├── README.md
 ├── LICENSE
 └── .gitignore
+\```
 
+---
 
+## Evidências de Funcionamento
 
-Ambiente de Desenvolvimento
+As capturas de tela demonstram a execução do sistema e suas principais funcionalidades em ambiente local.
+
+- [01 — Menu Principal](docs/evidencias/01-menu-principal.png)
+- [02 — Consulta de Colaboradores](docs/evidencias/02-consulta-colaboradores.png)
+- [03 — Histórico de Auditoria — Registros 1 a 4](docs/evidencias/03-historico-auditoria-parte1%20a%204.png)
+- [04 — Histórico de Auditoria — Registros 5 a 7](docs/evidencias/04-historico-auditoria-parte%202%20-%205%20a%207.png)
+- [Descrição das evidências](docs/evidencias/DESCRICAO.md)
+
+---
+
+## Ambiente de Desenvolvimento
+
 O projeto utiliza um ambiente local de simulação, com dados fictícios. Não realiza criação, alteração ou desativação de contas corporativas reais.
 
 Possíveis integrações com serviços de diretório e plataformas de identidade poderão ser consideradas em etapas futuras, exclusivamente em ambientes de teste autorizados.
 
-Objetivo
+---
+
+## Objetivo
+
 Aplicar conceitos de IAM, gerenciamento de identidades, automação de processos e rastreabilidade em Segurança da Informação, demonstrando na prática o ciclo de vida de identidades digitais em uma organização.
 
-Repositório no GitHub
-LifeCycle IAM — Acessar projeto
+---
 
-Projeto em desenvolvimento contínuo.
+## Repositório no GitHub
 
-**Agora o README está organizado:** títulos com `#`, subtítulos com `##` e `###`, divisórias entre as seções e estrutura do projeto em bloco de código.
+[LifeCycle IAM — Acessar projeto](https://github.com/marcioaugustomazzochi/lifecycle-iam)
+
+**Projeto em desenvolvimento contínuo.**
+
+
+Importante: copie o conteúdo inteiro do bloco, incluindo os marcadores Markdown. Não copie os três acentos graves externos que delimitam o bloco de apresentação.
