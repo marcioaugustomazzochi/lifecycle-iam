@@ -74,21 +74,23 @@ lifecycle-iam/
 
 ## Evidências de Funcionamento
 
-### Menu Principal
+## Funcionalidades Implementadas
 
-![Menu Principal](docs/evidencias/01-menu-principal.png)
+- Admissão de colaboradores (Joiner).
+- Movimentação de colaboradores (Mover).
+- Desligamento de colaboradores (Leaver).
+- Registro de eventos em banco de dados SQLite.
+- Consulta de colaboradores.
+- Consulta do histórico de auditoria.
 
-### Consulta de Colaboradores
+---
 
-![Consulta de Colaboradores](docs/evidencias/02-consulta-colaboradores.png)
+## Tecnologias Utilizadas
 
-### Histórico de Auditoria — Parte 1
-
-![Histórico de Auditoria - Parte 1](docs/evidencias/03-historico-auditoria-parte1%20a%204.png)
-
-### Histórico de Auditoria — Parte 2
-
-![Histórico de Auditoria - Parte 2](docs/evidencias/04-historico-auditoria-parte%202%20-%205%20a%207.png)
+- Python 3
+- SQLite
+- SQL
+- Git e GitHub
 
 ---
 
