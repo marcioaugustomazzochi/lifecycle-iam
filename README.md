@@ -1,63 +1,93 @@
 # LifeCycle IAM — Automação do Ciclo de Vida de Identidades Corporativas com Python
 
-Estou iniciando o desenvolvimento de um projeto na área de **Segurança da Informação**, com foco em **Identity and Access Management (IAM)**.
+Projeto desenvolvido em Python com foco em **Identity and Access Management (IAM)** e automação do gerenciamento de identidades digitais em ambientes corporativos.
 
-O projeto, denominado **LifeCycle IAM**, tem como objetivo desenvolver uma solução em Python para automatizar processos relacionados ao ciclo de vida das identidades digitais em ambientes corporativos.
-
-A proposta é simular a integração entre os setores de **Recursos Humanos (RH)** e **Tecnologia da Informação (TI)**, contemplando três processos fundamentais:
+O LifeCycle IAM simula processos relacionados ao ciclo de vida de colaboradores, contemplando admissão, movimentação e desligamento, com registro persistente das operações em banco de dados SQLite.
 
 ---
 
-## 1. Admissão (Joiner)
+## Funcionalidades Implementadas
 
-- Recebimento e validação dos dados do novo colaborador.
-- Simulação da criação de contas corporativas.
-- Registro das operações realizadas.
+### 1. Admissão (Joiner)
 
-## 2. Movimentação (Mover)
+- Cadastro de novos colaboradores.
+- Validação dos dados obrigatórios e do e-mail corporativo.
+- Verificação de e-mails duplicados.
+- Registro do evento de admissão na auditoria.
 
-- Identificação de mudanças de departamento ou função.
-- Atualização das informações da identidade.
-- Revisão dos acessos associados às novas atribuições.
+### 2. Movimentação (Mover)
 
-## 3. Desligamento (Leaver)
+- Atualização do departamento do colaborador.
+- Atualização do cargo.
+- Registro das informações anteriores e atualizadas.
+- Histórico da movimentação para fins de auditoria.
 
-- Processamento do evento de desligamento.
-- Simulação da desativação de contas corporativas.
-- Registro da revogação dos acessos.
+### 3. Desligamento (Leaver)
+
+- Confirmação do desligamento.
+- Alteração do status do colaborador para INATIVO.
+- Impedimento de novo desligamento de um colaborador já inativo.
+- Registro do evento na auditoria.
+
+### 4. Consultas e Auditoria
+
+- Consulta dos colaboradores cadastrados.
+- Identificação dos colaboradores ativos e inativos.
+- Consulta do histórico de operações.
+- Armazenamento dos registros em banco de dados SQLite.
 
 ---
 
-## Tecnologias previstas
+## Tecnologias Utilizadas
 
-- Python
+- Python 3
 - SQLite
-- JSON
-- Logging
-- Git e GitHub
-
-## Outros recursos planejados
-
-- Controle de solicitações e aprovações.
-- Registro de auditoria e rastreabilidade.
-- Identificação e tratamento de falhas.
-- Controle de operações pendentes.
-- Geração de relatórios operacionais.
+- SQL
+- Git
+- GitHub
 
 ---
 
-## Ambiente de desenvolvimento
+## Estrutura do Projeto
 
-O desenvolvimento será realizado inicialmente em ambiente simulado, utilizando dados fictícios e sem integração com contas corporativas reais.
+```text
+lifecycle-iam/
+├── data/
+├── database/
+│   └── lifecycle.db
+├── docs/
+│   └── evidencias/
+├── logs/
+├── modules/
+│   ├── __init__.py
+│   ├── admission.py
+│   ├── movement.py
+│   └── termination.py
+├── reports/
+├── main.py
+├── README.md
+├── LICENSE
+└── .gitignore
 
-## Objetivo
 
-Aplicar conceitos de IAM e automação de segurança em um projeto prático, explorando os desafios envolvidos no gerenciamento de identidades durante todo o vínculo de um colaborador com uma organização.
 
-## Repositório no GitHub
+Evidências de Funcionamento
+Menu Principal
+Consulta de Colaboradores
+Histórico de Auditoria — Parte 1
+Histórico de Auditoria — Parte 2
 
-[LifeCycle IAM — Acessar projeto](https://github.com/marcioaugustomazzochi/lifecycle-iam)
+Ambiente de Desenvolvimento
+O projeto utiliza um ambiente local de simulação, com dados fictícios. Não realiza criação, alteração ou desativação de contas corporativas reais.
 
-O projeto está em fase inicial de planejamento e desenvolvimento. Pretendo compartilhar sua evolução, implementação e aprendizados ao longo das próximas etapas.
+Possíveis integrações com serviços de diretório e plataformas de identidade poderão ser consideradas em etapas futuras, exclusivamente em ambientes de teste autorizados.
 
-**Sugestões técnicas e contribuições são bem-vindas!**
+Objetivo
+Aplicar conceitos de IAM, gerenciamento de identidades, automação de processos e rastreabilidade em Segurança da Informação, demonstrando na prática o ciclo de vida de identidades digitais em uma organização.
+
+Repositório no GitHub
+LifeCycle IAM — Acessar projeto
+
+Projeto em desenvolvimento contínuo.
+
+Agora sim: os `#`, `##` e `###` aparecem literalmente no código Markdown.
