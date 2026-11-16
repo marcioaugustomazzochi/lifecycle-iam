@@ -50,7 +50,6 @@ O LifeCycle IAM simula processos relacionados ao ciclo de vida de colaboradores,
 
 ## Estrutura do Projeto
 
-\```text
 lifecycle-iam/
 ├── data/
 ├── database/
@@ -73,7 +72,6 @@ lifecycle-iam/
 ├── README.md
 ├── LICENSE
 └── .gitignore
-\```
 
 ---
 
