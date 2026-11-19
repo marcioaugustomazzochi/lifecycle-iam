@@ -52,8 +52,9 @@ O sistema simula processos relacionados ao ciclo de vida de colaboradores, conte
 
 ---
 
-Estrutura do Projeto
+## Estrutura do Projeto
 
+```text
 lifecycle-iam/
 │
 ├── docs/
@@ -75,22 +76,24 @@ lifecycle-iam/
 ├── README.md
 ├── LICENSE
 └── .gitignore
+```
 
-Evidências de Funcionamento
+---
+
+## Evidências de Funcionamento
 
 As capturas de tela demonstram a execução do sistema e suas principais funcionalidades em ambiente local.
 
-01 — Menu Principal: apresentação das opções disponíveis no sistema.
+- **01 — Menu Principal:** apresentação das opções disponíveis no sistema.
+- **02 — Consulta de Colaboradores:** visualização dos colaboradores cadastrados.
+- **03 — Histórico de Auditoria:** registros das operações realizadas, do primeiro ao quarto registro.
+- **04 — Histórico de Auditoria:** continuidade dos registros, do quinto ao sétimo registro.
 
-02 — Consulta de Colaboradores: visualização dos colaboradores cadastrados.
+A descrição detalhada das capturas está disponível em `docs/evidencias/DESCRICAO.md`.
 
-03 — Histórico de Auditoria: registros das operações realizadas, do primeiro ao quarto registro.
+---
 
-04 — Histórico de Auditoria: continuidade dos registros, do quinto ao sétimo registro.
-
-A descrição detalhada das capturas está disponível em docs/evidencias/DESCRICAO.md.
-
-Ambiente de Desenvolvimento
+## Ambiente de Desenvolvimento
 
 O projeto utiliza um ambiente local de simulação, com dados fictícios.
 
@@ -100,81 +103,26 @@ O sistema não realiza criação, alteração ou desativação de contas corpora
 
 Possíveis integrações com serviços de diretório e plataformas de identidade poderão ser consideradas em etapas futuras, exclusivamente em ambientes de teste autorizados.
 
-Objetivo
+---
+
+## Objetivo
 
 Aplicar conceitos de IAM, gerenciamento de identidades, automação de processos e rastreabilidade em Segurança da Informação, demonstrando na prática o ciclo de vida de identidades digitais em uma organização.
 
-Repositório no GitHub
+---
 
-LifeCycle IAM — Acessar projeto
+## Repositório no GitHub
 
-Licença
+[LifeCycle IAM — Acessar projeto](https://github.com/marcioaugustomazzochi/lifecycle-iam)
+
+---
+
+## Licença
 
 Este projeto está disponibilizado sob a licença MIT.
 
-Status do Projeto
+---
 
-Projeto em desenvolvimento contínuo.
+## Status do Projeto
 
-## Estrutura do Projeto
-
-```text
-lifecycle-iam/
-│
-├── data/
-│
-├── database/
-│   └── lifecycle.db
-│
-├── docs/
-│   └── evidencias/
-│       ├── 01-menu-principal.png
-│       ├── 02-consulta-colaboradores.png
-│       ├── 03-historico-auditoria-parte1.png
-│       ├── 04-historico-auditoria-parte2.png
-│       └── DESCRICAO.md
-│
-├── logs/
-│
-├── modules/
-│   ├── __init__.py
-│   ├── admission.py
-│   ├── movement.py
-│   └── termination.py
-│
-├── reports/
-│
-├── main.py
-├── README.md
-├── LICENSE
-└── .gitignore
-
-
-
-Evidências de Funcionamento
-As capturas de tela demonstram a execução do sistema e suas principais funcionalidades em ambiente local.
-- 01 — Menu Principal: apresentação das opções disponíveis no sistema.
-- 02 — Consulta de Colaboradores: visualização dos colaboradores cadastrados.
-- 03 — Histórico de Auditoria: registros das operações realizadas, do primeiro ao quarto registro.
-- 04 — Histórico de Auditoria: continuidade dos registros, do quinto ao sétimo registro.
-Descrição das Evidências
-As evidências estão disponíveis no diretório docs/evidencias/ e documentam o funcionamento das principais funcionalidades implementadas.
-
-Ambiente de Desenvolvimento
-O projeto utiliza um ambiente local de simulação, com dados fictícios.
-
-Não realiza criação, alteração ou desativação de contas corporativas reais.
-
-Possíveis integrações com serviços de diretório e plataformas de identidade poderão ser consideradas em etapas futuras, exclusivamente em ambientes de teste autorizados.
-
-Objetivo
-Aplicar conceitos de IAM, gerenciamento de identidades, automação de processos e rastreabilidade em Segurança da Informação, demonstrando na prática o ciclo de vida de identidades digitais em uma organização.
-
-Repositório no GitHub
-LifeCycle IAM — Acessar projeto
-
-Licença
-Este projeto está disponibilizado sob a licença MIT.
-
-Status do Projeto
 Projeto em desenvolvimento contínuo.
