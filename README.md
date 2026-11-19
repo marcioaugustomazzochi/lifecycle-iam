@@ -1,8 +1,12 @@
 # LifeCycle IAM — Automação do Ciclo de Vida de Identidades Corporativas com Python
 
-Projeto desenvolvido em Python com foco em **Identity and Access Management (IAM)** e automação do gerenciamento de identidades digitais em ambientes corporativos.
+---
 
-O LifeCycle IAM simula processos relacionados ao ciclo de vida de colaboradores, contemplando admissão, movimentação e desligamento, com registro persistente das operações em banco de dados SQLite.
+## Descrição do Projeto
+
+O LifeCycle IAM é um projeto desenvolvido em Python, com foco em Identity and Access Management (IAM) e automação do gerenciamento de identidades digitais em ambientes corporativos.
+
+O sistema simula processos relacionados ao ciclo de vida de colaboradores, contemplando admissão, movimentação e desligamento, com registro persistente das operações em banco de dados SQLite.
 
 ---
 
@@ -50,62 +54,63 @@ O LifeCycle IAM simula processos relacionados ao ciclo de vida de colaboradores,
 
 ## Estrutura do Projeto
 
+```text
 lifecycle-iam/
+│
 ├── data/
+│
 ├── database/
 │   └── lifecycle.db
+│
 ├── docs/
 │   └── evidencias/
 │       ├── 01-menu-principal.png
 │       ├── 02-consulta-colaboradores.png
-│       ├── 03-historico-auditoria-parte1 a 4.png
-│       ├── 04-historico-auditoria-parte 2 - 5 a 7.png
+│       ├── 03-historico-auditoria-parte1.png
+│       ├── 04-historico-auditoria-parte2.png
 │       └── DESCRICAO.md
+│
 ├── logs/
+│
 ├── modules/
 │   ├── __init__.py
 │   ├── admission.py
 │   ├── movement.py
 │   └── termination.py
+│
 ├── reports/
+│
 ├── main.py
 ├── README.md
 ├── LICENSE
 └── .gitignore
 
----
 
-## Evidências de Funcionamento
 
+Evidências de Funcionamento
 As capturas de tela demonstram a execução do sistema e suas principais funcionalidades em ambiente local.
+- 01 — Menu Principal: apresentação das opções disponíveis no sistema.
+- 02 — Consulta de Colaboradores: visualização dos colaboradores cadastrados.
+- 03 — Histórico de Auditoria: registros das operações realizadas, do primeiro ao quarto registro.
+- 04 — Histórico de Auditoria: continuidade dos registros, do quinto ao sétimo registro.
+Descrição das Evidências
+As evidências estão disponíveis no diretório docs/evidencias/ e documentam o funcionamento das principais funcionalidades implementadas.
 
-- [01 — Menu Principal](docs/evidencias/01-menu-principal.png)
-- [02 — Consulta de Colaboradores](docs/evidencias/02-consulta-colaboradores.png)
-- [03 — Histórico de Auditoria — Registros 1 a 4](docs/evidencias/03-historico-auditoria-parte1%20a%204.png)
-- [04 — Histórico de Auditoria — Registros 5 a 7](docs/evidencias/04-historico-auditoria-parte%202%20-%205%20a%207.png)
-- [Descrição das evidências](docs/evidencias/DESCRICAO.md)
+Ambiente de Desenvolvimento
+O projeto utiliza um ambiente local de simulação, com dados fictícios.
 
----
-
-## Ambiente de Desenvolvimento
-
-O projeto utiliza um ambiente local de simulação, com dados fictícios. Não realiza criação, alteração ou desativação de contas corporativas reais.
+Não realiza criação, alteração ou desativação de contas corporativas reais.
 
 Possíveis integrações com serviços de diretório e plataformas de identidade poderão ser consideradas em etapas futuras, exclusivamente em ambientes de teste autorizados.
 
----
-
-## Objetivo
-
+Objetivo
 Aplicar conceitos de IAM, gerenciamento de identidades, automação de processos e rastreabilidade em Segurança da Informação, demonstrando na prática o ciclo de vida de identidades digitais em uma organização.
 
----
+Repositório no GitHub
+LifeCycle IAM — Acessar projeto
 
-## Repositório no GitHub
+Licença
+Este projeto está disponibilizado sob a licença MIT.
 
-[LifeCycle IAM — Acessar projeto](https://github.com/marcioaugustomazzochi/lifecycle-iam)
-
-**Projeto em desenvolvimento contínuo.**
-
-
-Importante: copie o conteúdo inteiro do bloco, incluindo os marcadores Markdown. Não copie os três acentos graves externos que delimitam o bloco de apresentação.
+Status do Projeto
+Projeto em desenvolvimento contínuo.
