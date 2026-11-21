@@ -2,10 +2,11 @@ from contextlib import closing
 from datetime import datetime, timezone
 
 from modules.database import conectar
+from modules.rbac import _verificar_permissao
 
 
-def desligar_colaborador(colaborador_id):
-    """Desativa um colaborador e registra o evento de desligamento."""
+def desligar_colaborador(colaborador_id, operador_id):
+    """Desativa colaborador e acesso ao sistema, com auditoria."""
 
     if not isinstance(colaborador_id, int) or colaborador_id <= 0:
         raise ValueError("O identificador do colaborador é inválido.")
@@ -14,6 +15,18 @@ def desligar_colaborador(colaborador_id):
 
     with closing(conectar()) as conexao:
         with conexao:
+            autorizado = _verificar_permissao(
+                conexao,
+                operador_id,
+                "colaborador.desligar"
+            )
+
+            if not autorizado:
+                raise PermissionError(
+                    "Acesso negado. Você não possui permissão "
+                    "para desligar colaboradores."
+                )
+
             colaborador = conexao.execute(
                 """
                 SELECT nome, status
@@ -38,22 +51,39 @@ def desligar_colaborador(colaborador_id):
                 (colaborador_id,)
             )
 
+            # Desativa a conta de acesso vinculada ao colaborador.
+            conexao.execute(
+                """
+                UPDATE usuarios
+                SET ativo = 0
+                WHERE colaborador_id = ?
+                """,
+                (colaborador_id,)
+            )
+
             descricao = (
                 f"Desligamento registrado para {colaborador['nome']}. "
-                "Status alterado de ATIVO para INATIVO."
+                "Status alterado de ATIVO para INATIVO. "
+                "Contas de acesso vinculadas foram desativadas."
             )
 
             conexao.execute(
                 """
-                INSERT INTO auditoria
-                (colaborador_id, evento, descricao, data_evento)
-                VALUES (?, ?, ?, ?)
+                INSERT INTO auditoria (
+                    colaborador_id,
+                    evento,
+                    descricao,
+                    data_evento,
+                    operador_id
+                )
+                VALUES (?, ?, ?, ?, ?)
                 """,
                 (
                     colaborador_id,
                     "DESLIGAMENTO",
                     descricao,
-                    data_evento
+                    data_evento,
+                    operador_id
                 )
             )
 

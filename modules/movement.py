@@ -2,10 +2,16 @@ from contextlib import closing
 from datetime import datetime, timezone
 
 from modules.database import conectar
+from modules.rbac import _verificar_permissao
 
 
-def movimentar_colaborador(colaborador_id, novo_departamento, novo_cargo):
-    """Atualiza departamento e cargo e registra a movimentação."""
+def movimentar_colaborador(
+    colaborador_id,
+    novo_departamento,
+    novo_cargo,
+    operador_id
+):
+    """Atualiza departamento e cargo com autorização e auditoria."""
 
     if not isinstance(colaborador_id, int) or colaborador_id <= 0:
         raise ValueError("O identificador do colaborador é inválido.")
@@ -26,6 +32,18 @@ def movimentar_colaborador(colaborador_id, novo_departamento, novo_cargo):
 
     with closing(conectar()) as conexao:
         with conexao:
+            autorizado = _verificar_permissao(
+                conexao,
+                operador_id,
+                "colaborador.movimentar"
+            )
+
+            if not autorizado:
+                raise PermissionError(
+                    "Acesso negado. Você não possui permissão "
+                    "para movimentar colaboradores."
+                )
+
             colaborador = conexao.execute(
                 """
                 SELECT nome, departamento, cargo
@@ -61,15 +79,21 @@ def movimentar_colaborador(colaborador_id, novo_departamento, novo_cargo):
 
             conexao.execute(
                 """
-                INSERT INTO auditoria
-                (colaborador_id, evento, descricao, data_evento)
-                VALUES (?, ?, ?, ?)
+                INSERT INTO auditoria (
+                    colaborador_id,
+                    evento,
+                    descricao,
+                    data_evento,
+                    operador_id
+                )
+                VALUES (?, ?, ?, ?, ?)
                 """,
                 (
                     colaborador_id,
                     "MOVIMENTACAO",
                     descricao,
-                    data_evento
+                    data_evento,
+                    operador_id
                 )
             )
 

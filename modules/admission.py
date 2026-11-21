@@ -2,10 +2,17 @@ from contextlib import closing
 from datetime import datetime, timezone
 
 from modules.database import conectar
+from modules.rbac import _verificar_permissao
 
 
-def admitir_colaborador(nome, email, departamento, cargo):
-    """Cadastra um colaborador e registra o evento de admissão."""
+def admitir_colaborador(
+    nome,
+    email,
+    departamento,
+    cargo,
+    operador_id
+):
+    """Cadastra colaborador com autorização e auditoria do operador."""
 
     campos = {
         "nome": nome,
@@ -30,6 +37,17 @@ def admitir_colaborador(nome, email, departamento, cargo):
 
     with closing(conectar()) as conexao:
         with conexao:
+            autorizado = _verificar_permissao(
+                conexao,
+                operador_id,
+                "colaborador.admitir"
+            )
+
+            if not autorizado:
+                raise PermissionError(
+                    "Acesso negado. Você não possui permissão para admitir colaboradores."
+                )
+
             cursor = conexao.execute(
                 """
                 INSERT INTO colaboradores
@@ -44,14 +62,21 @@ def admitir_colaborador(nome, email, departamento, cargo):
             conexao.execute(
                 """
                 INSERT INTO auditoria
-                (colaborador_id, evento, descricao, data_evento)
-                VALUES (?, ?, ?, ?)
+                (
+                    colaborador_id,
+                    evento,
+                    descricao,
+                    data_evento,
+                    operador_id
+                )
+                VALUES (?, ?, ?, ?, ?)
                 """,
                 (
                     colaborador_id,
                     "ADMISSAO",
                     f"Admissão registrada para {nome}.",
-                    data_admissao
+                    data_admissao,
+                    operador_id
                 )
             )
 
