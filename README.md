@@ -116,19 +116,25 @@ lifecycle-iam/
 ├── README.md
 ├── LICENSE
 └── .gitignore
+```
 
+---
 
+## 📸 Evidências de Funcionamento
 
-📸 Evidências de Funcionamento
-A pasta docs/evidencias/ contém registros dos testes realizados em ambiente local.
+A pasta `docs/evidencias/` contém registros dos testes realizados em ambiente local.
 
 As evidências incluem:
-- 01 — Menu Principal: opções disponíveis no sistema.
-- 02 — Consulta de Colaboradores: visualização dos colaboradores cadastrados.
-- 03 e 04 — Histórico de Auditoria: registros das operações realizadas.
-- 05 — Proteção do Administrador: documentação do teste que confirmou o bloqueio da revogação do último perfil de Administrador ativo.
 
-🔐 Ambiente de Desenvolvimento e Segurança
+- **01 — Menu Principal:** opções disponíveis no sistema.
+- **02 — Consulta de Colaboradores:** visualização dos colaboradores cadastrados.
+- **03 e 04 — Histórico de Auditoria:** registros das operações realizadas.
+- **05 — Proteção do Administrador:** documentação do teste que confirmou o bloqueio da revogação do último perfil de Administrador ativo.
+
+---
+
+## 🔐 Ambiente de Desenvolvimento e Segurança
+
 O projeto utiliza um ambiente local de simulação, com dados fictícios.
 
 O banco de dados SQLite é armazenado localmente e não faz parte dos arquivos publicados no repositório.
@@ -139,16 +145,28 @@ O sistema não realiza criação, alteração ou desativação de contas corpora
 
 Possíveis integrações com serviços de diretório e plataformas IAM poderão ser consideradas em etapas futuras, exclusivamente em ambientes de teste autorizados.
 
-🎯 Objetivo
+---
+
+## 🎯 Objetivo
+
 Aplicar conceitos de Identity and Access Management, segurança da informação, autenticação, autorização, RBAC, gestão de identidades e automação de processos.
 
 O projeto busca demonstrar, de maneira prática, como controles de acesso e processos de gerenciamento de identidades podem contribuir para a governança e a segurança em ambientes organizacionais.
 
-🔗 Repositório no GitHub
-LifeCycle IAM — Acessar projeto
+---
 
-📄 Licença
+## 🔗 Repositório no GitHub
+
+[LifeCycle IAM — Acessar projeto](https://github.com/marcioaugustomazzochi/lifecycle-iam)
+
+---
+
+## 📄 Licença
+
 Este projeto está disponibilizado sob a licença MIT.
 
-🚧 Status do Projeto
+---
+
+## 🚧 Status do Projeto
+
 Projeto em desenvolvimento contínuo, com implementação de funcionalidades de gestão do ciclo de vida de identidades, autenticação, controle de acesso RBAC e auditoria.
