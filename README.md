@@ -57,4 +57,4 @@ Licença MIT.
 🚧 Status do Projeto
 Projeto em desenvolvimento contínuo.
 
-**É esse o formato que vamos utilizar:** títulos com `#`, subtítulos, listas, tabelas e linhas `---` separando as seções.
+
